@@ -3,16 +3,18 @@
     <nav
       class="nav-bar bg-white text-black dark:bg-zinc-900 dark:text-white flex flex-col md:flex-row md:justify-between py-1 md:px-20 lg:px-40 xl:px-60">
       <div class="left-menu flex flex-col md:flex-row">
-        <div class="mobile-bar flex flex-row justify-between items-center py-2 md:py-0">
+        <div class="mobile-bar flex flex-row justify-between items-center md:py-0 pb-1">
           <NuxtLink to="/" class="brand px-4 cursor-pointer font-bold">Kien Le</NuxtLink>
-          <div class="btn-collapse md:hidden flex items-center justify-center px-4" @click="isClick = !isClick">
-            <button class="btn border-0 is-show hidden">
+          <button
+            class="btn border-0 btn-collapse md:hidden flex items-center justify-center mr-2 w-10 h-10 flex items-center justify-center focus:outline-none focus:ring focus:border-blue-500 rounded-lg"
+            @click="isClick = !isClick">
+            <div class="btn border-0 is-show hidden">
               <icons-close class="stroke-black fill-black dark:stroke-white dark:fill-white" />
-            </button>
-            <button class="btn border-0 is-hide">
+            </div>
+            <div class=" btn border-0 is-hide">
               <icons-menu class="stroke-black fill-black dark:stroke-white dark:fill-white" />
-            </button>
-          </div>
+            </div>
+          </button>
         </div>
         <div class="is-show hidden md:flex menu-items flex flex-col md:flex-row md:gap-0">
           <NuxtLink to="/"
@@ -23,15 +25,16 @@
             :class="{ '-selected': path === '/me' }">👨🏻‍💻 Me</NuxtLink>
         </div>
       </div>
-      <div class="is-show hidden md:flex right-menu flex flex-col md:flex-row py-2 md:py-0 gap-4">
+      <div
+        class="is-show hidden md:flex right-menu flex flex-col md:items-center items-start md:flex-row py-2 md:py-0 gap-4">
         <select-mode class="pl-4 md:pl-0 " />
-        <div class="me flex md:flex-row md:pr-4 items-center py-2 pt-4 md:py-0 pl-4 md:pl-0">
+        <NuxtLink to="/me" class="me flex w-full md:flex-row md:pr-4 items-center py-2 pt-4 md:py-0 pl-4 md:pl-0">
           <div class="flex items-center">
             <nuxt-img src="/img/avatar_small.jpg" loading="lazy"
               class="object-cover rounded-lg avatar h-12 w-12 md:h-10 md:w-10 md:py-0 cursor-pointer" />
             <div class="email pl-4 md:hidden py-2">Lê Trung Kiên</div>
           </div>
-        </div>
+        </NuxtLink>
       </div>
     </nav>
   </header>
@@ -56,9 +59,19 @@ watch((isClick), () => {
 }
 
 .menu-items {
+  >.item {
+    border-color: #FAFAFA;
+    border-left-width: 4px;
+
+    @media only screen and (min-width: 768px) {
+      background-color: unset;
+      border-left-width: 0px;
+      margin-bottom: calc(4px + -0.35rem);
+    }
+  }
+
   >.item:hover {
     background-color: #FAFAFA;
-    border-left-width: 4px;
     border-color: #BFBFBF;
 
     @media only screen and (min-width: 768px) {
@@ -68,6 +81,7 @@ watch((isClick), () => {
       margin-bottom: -0.35rem;
     }
   }
+
   >.item.-selected {
     background-color: #EEF6FF;
     border-left-width: 4px;
@@ -85,6 +99,7 @@ watch((isClick), () => {
 .right-menu {
   >.me {
     border-top: 1px solid #ccc;
+
     @media only screen and (min-width: 768px) {
       border-top: 0px;
     }
@@ -96,15 +111,22 @@ html.dark {
   .nav-bar {
     color: #FAFAFA;
   }
+
   .menu-items {
+    >.item {
+      border-color: #18181B;
+    }
     >.item:hover {
       background-color: #404040;
+
       @media only screen and (min-width: 768px) {
         background-color: unset;
       }
     }
+
     >.item.-selected {
       background-color: #404040;
+
       @media only screen and (min-width: 768px) {
         background-color: unset;
       }

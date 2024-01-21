@@ -40,7 +40,7 @@ const { name, link, description, date } = toRefs(props)
   padding: 1rem;
   margin-bottom: 1rem;
   transition: all 0.2s ease-in-out;
-  &:hover {
+  &:hover, &:focus {
     transform: scale(1.01);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-color: #3B82F6;
