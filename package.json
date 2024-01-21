@@ -23,5 +23,8 @@
     "notion-client": "^6.16.0",
     "prismjs": "^1.29.0",
     "vue-notion": "^3.0.0-beta.1"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.6.1"
   }
 }
