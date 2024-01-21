@@ -21,6 +21,7 @@
     "@notionhq/client": "^2.2.14",
     "katex": "^0.16.9",
     "notion-client": "^6.16.0",
+    "prism-theme-vars": "^0.2.4",
     "prismjs": "^1.29.0"
   },
   "optionalDependencies": {
