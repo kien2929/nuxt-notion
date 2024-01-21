@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  target: "static",
   build: {
     transpile: ["vue-notion"],
   },
@@ -8,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
-    'nuxt-svgo'
+    'nuxt-svgo',
   ],
   vuetify: {
     moduleOptions: {
@@ -22,8 +23,10 @@ export default defineNuxtConfig({
     '@/assets/scss/app.scss',
   ],
   colorMode: {
-    preference: 'system',
-    fallback: 'light',
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'light', // fallback value if not system preference found
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
     classSuffix: '',
     storageKey: 'nuxt-color-mode'
   },

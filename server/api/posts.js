@@ -19,9 +19,9 @@ export default eventHandler(() => {
     .then(data => data.results)
     .then(data => data.map(item => ({
       id: item.id || '',
-      name: item.properties.Name.title[0].plain_text || '',
-      description: item.properties.Content.rich_text[0].text.content || '',
+      name: String(item.properties.Name.title[0].plain_text) || '',
+      description: String(item.properties.Content.rich_text[0].text.content) || '',
       link: '/blogs/' + item.properties.Link.rich_text[0].text.content || '',
-      date: item.created_time || '',
+      date: String(item.created_time) || '',
     })))
 })

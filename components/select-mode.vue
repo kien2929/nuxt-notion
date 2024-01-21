@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="round flex">
-      <div class="mode h-8 w-8 flex items-center justify-center cursor-pointer dark:text-white"
-        :class="$colorMode.preference === 'light' ? '-selected' : ''" @click="setMode('light')" value="light">
+      <div class="mode -light h-8 w-8 flex items-center justify-center cursor-pointer dark:text-white"
+        :class="{ '-selected' : preference === 'light' }" @click="preference = 'light'" value="light">
         <icons-light class="icon-light stroke-black fill-white dark:stroke-white dark:fill-black"/>
       </div>
-      <div class="mode h-8 w-8 flex items-center justify-center cursor-pointer"
-        :class="$colorMode.preference === 'system' ? '-selected' : ''" @click="setMode('system')" value="system">
+      <div class="mode -system h-8 w-8 flex items-center justify-center cursor-pointer"
+        :class="{ '-selected' : preference === 'system' }" @click="preference = 'system'" value="system">
         <icons-system class="icon-system stroke-black fill-white dark:stroke-white dark:fill-black"/>
       </div>
-      <div class="mode h-8 w-8 flex items-center justify-center cursor-pointer"
-        :class="$colorMode.preference === 'dark' ? '-selected' : ''" @click="setMode('dark')" value="dark">
+      <div class="mode -dark h-8 w-8 flex items-center justify-center cursor-pointer"
+        :class="{ '-selected' : preference === 'dark' }" @click="preference = 'dark'" value="dark">
         <icons-dark class="icon-dark stroke-black fill-white dark:stroke-white dark:fill-black"/>
       </div>
     </div>
@@ -18,9 +18,13 @@
 </template>
 <script lang="ts" setup>
 const colorMode = useColorMode()
-const setMode = (value: string) => {
-  colorMode.preference = value
-}
+const preference = ref('')
+onMounted(() => {
+  preference.value = colorMode.preference
+})
+watch((preference), () => {
+  colorMode.preference = preference.value
+})
 </script>
 <style scoped lang="scss">
 .round {
