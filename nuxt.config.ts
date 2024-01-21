@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  target: "static",
+  target: "server",
   build: {
     transpile: ["vue-notion"],
   },
@@ -7,19 +7,10 @@ export default defineNuxtConfig({
   // plugins: [{ src: "vue-notion/nuxt/plugin.js", mode: "client" }],
   modules: [
     '@nuxtjs/tailwindcss',
-    '@vueuse/nuxt',
     '@nuxtjs/color-mode',
     'nuxt-svgo',
     '@nuxt/image'
   ],
-  vuetify: {
-    moduleOptions: {
-      /* module specific options */
-    },
-    vuetifyOptions: {
-      /* vuetify options */
-    }
-  },
   css: [
     '@/assets/scss/app.scss',
   ],

@@ -6,6 +6,7 @@
         <div class="mobile-bar flex flex-row justify-between items-center md:py-0 pb-1">
           <NuxtLink to="/" class="brand px-4 cursor-pointer font-bold">Kien Le</NuxtLink>
           <button
+            aria-label="menu"
             class="btn border-0 btn-collapse md:hidden flex items-center justify-center mr-2 w-10 h-10 flex items-center justify-center focus:outline-none focus:ring focus:border-blue-500 rounded-lg"
             @click="isClick = !isClick">
             <div class="btn border-0 is-show hidden">
