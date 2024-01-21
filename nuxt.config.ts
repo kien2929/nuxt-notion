@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
     'nuxt-svgo',
+    '@nuxt/image'
   ],
   vuetify: {
     moduleOptions: {
@@ -32,5 +33,10 @@ export default defineNuxtConfig({
   },
   svgo: {
     componentPrefix: 'icons'
+  },
+  imageOptions: {
+    component: "nuxt-img",
+    "some-attribute": "vue-notion-attr",
+    loading: "lazy"
   }
 });

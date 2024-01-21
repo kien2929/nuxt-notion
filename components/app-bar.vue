@@ -6,10 +6,10 @@
         <div class="mobile-bar flex flex-row justify-between items-center py-2 md:py-0">
           <NuxtLink to="/" class="brand px-4 cursor-pointer font-bold">Kien Le</NuxtLink>
           <div class="btn-collapse md:hidden flex items-center justify-center px-4" @click="isClick = !isClick">
-            <button class="is-show hidden">
+            <button class="btn border-0 is-show hidden">
               <icons-close class="stroke-black fill-black dark:stroke-white dark:fill-white" />
             </button>
-            <button class="is-hide">
+            <button class="btn border-0 is-hide">
               <icons-menu class="stroke-black fill-black dark:stroke-white dark:fill-white" />
             </button>
           </div>
@@ -27,7 +27,7 @@
         <select-mode class="pl-4 md:pl-0 " />
         <div class="me flex md:flex-row md:pr-4 items-center py-2 pt-4 md:py-0 pl-4 md:pl-0">
           <div class="flex items-center">
-            <img src="/img/avatar_small.jpg"
+            <nuxt-img src="/img/avatar_small.jpg" loading="lazy"
               class="object-cover rounded-lg avatar h-12 w-12 md:h-10 md:w-10 md:py-0 cursor-pointer" />
             <div class="email pl-4 md:hidden py-2">Lê Trung Kiên</div>
           </div>
