@@ -1,15 +1,13 @@
 export default defineNuxtConfig({
   target: "server",
-  build: {
-    transpile: ["vue-notion"],
-  },
   telemetry: false,
   // plugins: [{ src: "vue-notion/nuxt/plugin.js", mode: "client" }],
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'nuxt-svgo',
-    '@nuxt/image'
+    '@nuxt/image',
+    ['vue3-notion/nuxt', { css: true }],
   ],
   css: [
     '@/assets/scss/app.scss',

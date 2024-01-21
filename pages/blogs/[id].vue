@@ -1,5 +1,5 @@
 <template>
-  <NotionRenderer class="dark:bg-zinc-900" :blockMap="blockMap" fullPage />
+  <NotionRenderer class="dark:bg-zinc-900" :blockMap="blockMap" fullPage prism/>
 </template>
 <script lang="ts" setup>
 const route = useRoute()
@@ -18,7 +18,9 @@ useHead({
 })
 </script>
 <style lang="scss">
-@import "vue-notion/src/styles.css";
+@import "vue3-notion/dist/style.css";
+@import "prismjs/themes/prism.css";
+@import "katex/dist/katex.min.css";
 html.dark {
   .notion {
     color: antiquewhite ;

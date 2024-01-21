@@ -14,13 +14,14 @@
     "nuxt": "^3.8.2",
     "nuxt-svgo": "^4.0.0",
     "sanitize.css": "^13.0.0",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "vue3-notion": "^0.1.45"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.14",
+    "katex": "^0.16.9",
     "notion-client": "^6.16.0",
-    "prismjs": "^1.29.0",
-    "vue-notion": "^3.0.0-beta.1"
+    "prismjs": "^1.29.0"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.6.1"
