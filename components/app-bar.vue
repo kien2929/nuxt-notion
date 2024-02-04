@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav
-      class="nav-bar bg-white text-black dark:bg-zinc-900 dark:text-white flex flex-col md:flex-row md:justify-between py-1 md:px-20 lg:px-40 xl:px-60">
+      class="nav-bar bg-slate-50 text-black dark:bg-zinc-900 dark:text-white flex flex-col md:flex-row md:justify-between py-1 md:px-20 lg:px-40 xl:px-60">
       <div class="left-menu flex flex-col md:flex-row">
         <div class="mobile-bar flex flex-row justify-between items-center md:py-0 pb-1">
           <NuxtLink to="/" class="brand px-4 cursor-pointer font-bold">Kien Le</NuxtLink>
