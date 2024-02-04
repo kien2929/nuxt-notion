@@ -1,16 +1,16 @@
 <template>
   <div class="main-page bg-slate-50 dark:bg-zinc-900 dark:text-white p-4 md:px-20 lg:px-40 xl:px-60">
     <div class="flex flex-col items-center w-full md:flex-row md:gap-40 ">
-      <nuxt-img class="object-cover rounded-full h-100 w-100 image" loading="lazy" src="/img/avatar.png" />
+      <nuxt-img height="400" width="400" class="object-cover rounded-full h-100 w-100 image" loading="lazy" src="/img/avatar.png" />
       <div class="info flex md:!items-start">
         <div class="text">HI THERE! I'M <span>KIEN LE</span></div>
         <div class="text md:mt-20">A <span>full stack developer</span> passionate about creating interactive applications and
           experiences on the web.</div>
-        <div class="flex gap-10 items-center mt-10 flex-row">
+        <div class="flex gap-5 lg:gap-10 items-center mt-10 flex-row">
           <nuxt-link class="button flex justify-center items-center" to="https://drive.google.com/file/d/1OpdokY-9niZnMaucPziEh6FkGt4609lv/view?usp=sharing" target="_blank">
             <span class="button-content">Resume</span>
           </nuxt-link>
-          <div class="flex gap-10 icons">
+          <div class="flex gap-5 lg:gap-10 icons">
             <nuxt-link
               to="https://www.linkedin.com/in/ltk98" target="_blank"
               class="icon border-1 dark:bg-blue-950 rounded-lg shadow-lg w-10 h-10 flex justify-center items-center cursor-pointer">
