@@ -7,9 +7,9 @@
         <div class="text md:mt-20">A <span>full stack developer</span> passionate about creating interactive applications and
           experiences on the web.</div>
         <div class="flex gap-10 items-center mt-10 flex-row">
-          <button class="button">
+          <nuxt-link class="button flex justify-center items-center" to="https://drive.google.com/file/d/1OpdokY-9niZnMaucPziEh6FkGt4609lv/view?usp=sharing" target="_blank">
             <span class="button-content">Resume</span>
-          </button>
+          </nuxt-link>
           <div class="flex gap-10 icons">
             <nuxt-link
               to="https://www.linkedin.com/in/ltk98" target="_blank"
